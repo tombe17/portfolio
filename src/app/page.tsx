@@ -53,7 +53,7 @@ export default function Home() {
                 ease: "easeOut",
                 delay: 0.2                           // Optional: wait 0.2s so it appears after the header
               }}
-              className="absolute inset-0 flex items-center justify-center text-brand-primary text-4xl italic drop-shadow-[2px_2px_2px_rgba(0,0,0,0.5)]"
+              className="absolute inset-0 flex items-center justify-center text-brand-primary text-3xl italic drop-shadow-[2px_2px_2px_rgba(0,0,0,0.5)]"
             >
               Or maybe I should've been an artist ;)
             </motion.p>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat, Caveat } from "next/font/google"; // Import Montserrat
 import { Linkedin, Github } from "lucide-react";
+import { Analytics } from "@vercel/analytics/next";
 import Link from "next/link";
 import MotionProvider from "@/components/motion";
 import "./globals.css";
@@ -100,7 +101,7 @@ export default function RootLayout({
           </p>
         </div>
       </footer>
-
+      <Analytics />
       </body>
     </html>
   );
