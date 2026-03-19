@@ -151,8 +151,8 @@ export default function Home() {
                 <span className="font-handwriting font-bold">Kid.</span>
               </h3>
               <h2 className="text-2xl text-brand-primary leading-snug">
-                In my heart, I mean. I want to be like Peter Pan. Well in my heart, I mean. You know what I mean.
-                Wa-hoo! I love games like Mario!
+                In my heart, I mean. Sometimes you just gotta enjoy life. Have some fun and do something goofy like hitting all the blocks in Super Nintendo World. 
+                (If you couldn't tell, I like Mario) Wa-hoo!
               </h2>
             </div>
           </section>
