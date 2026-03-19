@@ -1,65 +1,199 @@
+"use client"; // <--- Add this at the absolute top
+import { motion } from "framer-motion";
+
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      <main className="min-h-screen bg-white w-full">
+
+        {/* First Picture */}
+        <section className="relative w-full min-h-[600px] overflow-hidden">
+            <div className="absolute inset-0 z-0">
+              <Image
+                src="/home-page/kayak.png" // Place your image in the /public folder
+                alt="Kayaking on the River"
+                fill
+                className="object-cover object-center brightness-70" // brightness-50 makes text easier to read
+                priority // Tells Next.js to load this immediately
+              />
+            </div>
+            <div className="relative z-20 max-w-6xl mx-auto px-6 pb-16 pt-32 min-h-[600px] flex flex-col justify-end text-center">
+              <h1 className="text-4xl md:text-6xl font-bold font-handwriting text-gray-300 leading-tight">
+                Howdy! <span className="text-gray-300">Come on in the water's great!</span>
+              </h1>
+            </div>
+        </section>
+
+        {/* Beginning of Story */}
+        <section id="mystory" className="flex flex-col px-6 py-8 gap-4 items-center bg-gray-50 w-full">
+          <div className="pb-6 max-w-6xl mx-auto">
+            <p className="text-3xl text-brand-primary text-center max-w-3xl">
+              Okay, so it's a little cold. But you wouldn't have jumped in if I told you that. Anyways, let's jump into my story!
+            </p><br></br>
+            <p className="text-3xl text-brand-primary text-center max-w-3xl pt-4">
+                As a kid, I always imagined myself in movies and wanted to be a 
+                <strong className="font-bold"> "Movie Maker."</strong>
+            </p>
+          </div>
+          <div className="relative w-full max-w-2xl min-h-[600px] aspect-video overflow-hidden rounded-xl shadow-xl">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/home-page/movie-pic.jpg" // Place your image in the /public folder
+              alt="When I grow up, I want to be a Movie Maker"
+              fill
+              className="object-cover object-top brightness-90"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <motion.p 
+              initial={{ opacity: 0, x: -150 }}        // Start invisible and 150px to the left
+              whileInView={{ opacity: 1, x: 0 }}     // Slide to the left into original spot
+              viewport={{ once: true }}              // Only animate once
+              transition={{ 
+                duration: 1.2, 
+                ease: "easeOut",
+                delay: 0.2                           // Optional: wait 0.2s so it appears after the header
+              }}
+              className="absolute inset-0 flex items-center justify-center text-brand-primary text-4xl italic drop-shadow-[2px_2px_2px_rgba(0,0,0,0.5)]"
+            >
+              Or maybe I should've been an artist ;)
+            </motion.p>
+          </div>
+
+          <p className="text-3xl text-brand-primary text-center max-w-3xl p-6 pb-12">
+            I found that stories helped me connect to others and make sense of my experiences.<br></br><br></br>
+            I want to "make movies" that people 
+            <strong className="font-bold"> live through </strong> 
+            that help them connect to others.<br></br><br></br>
+            Whether we're in the blue sky phase, the construction phase, or managing logistics along the way, here's how I help: 
+          </p>
+        </section>
+
+        {/* Who I am Sections */}
+        <div className="w-full">
+          {/* Dreamer Section */}
+          <section className="w-full mx-auto grid md:grid-cols-2 items-center">
+            <div className="relative w-full max-h-[500px] aspect-square overflow-hidden order-1">
+              <Image
+                src="/home-page/dream-big.jpg" // Place your image in the /public folder
+                alt="Dream Big"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="flex flex-col justify-center items-center text-center order-2 md:order-1 space-y-4 max-w-xl p-8">
+              <h3 className="text-3xl md:text-6xl text-brand-secondary">
+                <span className="font-handwriting">I'm a </span>
+                <span className="font-handwriting font-bold">Dreamer.</span>
+              </h3>
+              <h2 className="text-2xl text-brand-primary leading-snug text-gray-700">
+                I dream big. I'm all about envisioning the future, perfect for blue sky discussions! 
+                If you need an idea or want to hear my latest dream, let's chat!
+              </h2>
+            </div>
+          </section>
+
+          {/* Nerd Section */}
+          <section className="w-full mx-auto grid md:grid-cols-2 items-center bg-gray-50">
+            <div className="relative w-full max-h-[500px] aspect-square overflow-hidden order-1 md:order-2">
+              <Image
+                src="/home-page/vmuseum.jpg" // Place your image in the /public folder
+                alt="Heart Rate Monitor"
+                fill
+                className="object-cover object-bottom"
+              />
+            </div>
+            <div className="flex flex-col justify-center text-center order-2 md:order-1 space-y-4 max-w-xl p-8">
+              <h3 className="text-3xl md:text-6xl text-brand-secondary">
+                <span className="font-handwriting">I'm a </span>
+                <span className="font-handwriting font-bold">Nerd. </span>
+              </h3>
+              <h2 className="text-2xl text-brand-primary leading-snug text-gray-700">
+                It's true, even if I deny it. I love programming, and using technology to simplify and maximize life. 
+                I built this heart rate monitor for the Valentine's Museum during its construction phase!
+              </h2>
+            </div>
+          </section>
+
+          {/* Producer Section */}
+          <section className="w-full mx-auto grid md:grid-cols-2 items-center">
+            <div className="relative w-full max-h-[500px] aspect-square overflow-hidden order-1">
+              <Image
+                src="/home-page/batman.jpg" // Place your image in the /public folder
+                alt="Batman"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="flex flex-col justify-center items-center text-center order-2 md:order-1 space-y-4 max-w-xl p-8">
+              <h3 className="text-3xl md:text-6xl text-brand-secondary">
+                <span className="font-handwriting">I'm a </span>
+                <span className="font-handwriting font-bold">Producer.</span>
+              </h3>
+              <h2 className="text-2xl text-brand-primary leading-snug">
+                I build spaces for people to connect, focusing on education, spiritual, and memorable experiences. 
+                I led a team to celebrate volunteers in BYUSA with a suprise - Batman!
+              </h2>
+            </div>
+          </section>
+
+          {/* Kid Section */}
+          <section className="w-full mx-auto grid md:grid-cols-2 items-center bg-gray-50">
+            <div className="relative w-full max-h-[500px] aspect-square overflow-hidden order-1 md:order-2">
+              <Image
+                src="/home-page/mario.jpg" // Place your image in the /public folder
+                alt="Mario"
+                fill
+                className="object-cover object-top"
+              />
+            </div>
+            <div className="flex flex-col justify-center text-center order-2 md:order-1 space-y-4 max-w-xl p-8">
+              <h3 className="text-3xl md:text-6xl text-brand-secondary">
+                <span className="font-handwriting">I'm a </span>
+                <span className="font-handwriting font-bold">Kid.</span>
+              </h3>
+              <h2 className="text-2xl text-brand-primary leading-snug">
+                In my heart, I mean. I want to be like Peter Pan. Well in my heart, I mean. You know what I mean.
+                Wa-hoo! I love games like Mario!
+              </h2>
+            </div>
+          </section>
         </div>
+
+        {/* Link Section */}
+        <section className="relative aspect-video w-full min-h-[600px] overflow-hidden">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 z-0 w-full h-full object-cover brightness-70"
+          >
+            <source src="/home-page/wipeout.mp4" type="video/mp4" />
+            Sploosh. Your browser does not support the video tag.
+          </video>
+          <div className="relative z-20 max-w-4xl mx-auto px-6 pb-16 pt-32 min-h-[600px] flex flex-col justify-center text-center">
+            <p className="text-xl md:text-xl font-bold text-gray-300 pb-8">
+              The water's not that bad, right?
+              It can be nerve-wracking meeting new people, but making connections makes a difference! Even if you fall like me, it'll be ok :) 
+            <br></br><br></br>
+              From here, I'll let you swim around my projects, check out my art, or connect with me!<br></br>
+              <span className="italic text-lg p-4">yes, I actually did become an artist too :)</span>
+              <br></br>
+              <span className="font-handwriting -rotate-3 inline-block pt-3 text-3xl md:text-5xl">Cheers! </span>
+            </p>
+            <div className="flex justify-center gap-4">
+              <Link href="/projects" className="border border-brand-secondary px-8 py-3 rounded-full text-white hover:bg-brand-secondary hover:text-white transition">
+                View Projects
+              </Link>
+              <Link href="/projects/valentines-museum" className="border border-brand-secondary bg-brand-secondary px-8 py-3 rounded-full text-white hover:text-black transition">
+                Highlighted Project
+              </Link>
+              <Link href="/artwork" className="border border-brand-secondary px-8 py-3 rounded-full text-white hover:bg-brand-secondary hover:text-white transition">
+                View Art
+              </Link>
+            </div>
+          </div>
+        </section>
       </main>
-    </div>
   );
 }
