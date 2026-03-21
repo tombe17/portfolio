@@ -28,5 +28,39 @@ export const projects = [
     resultsProduced: "By creating a themed experience, we were able to attract more volunteers and had over 40 volunteers in attendance. There are so many details involved with a theme, and these are what really made the difference for our guests. I learned about the importance of theming and balancing the opinions of our team members throughout my time with BYUSA.",
     fun: "While this project was already fun, I made it more fun leaning into our theme and getting Batman and having trick-or-treating in our office!",
     topImage: "/projects/gratitude-events/batman.jpg"
+  },
+  {
+    slug: "harry-potter",
+    title: "Harry Potter Experience",
+    timeline: "Sep-Dec 2023",
+    description: "Designed a Harry Potter Themed Experience following the design thinking process.",
+    skills: ["Production", "Concept Development", "Collaboration", "Design Thinking"],
+    tools: ["Lucid"],
+    role: ["Team Member"],
+    overview: "Working with my team, we created a prototype experience that would be meaningful to Freshman at Brigham Young University. Following the design thinking process, we created a Harry Potter Experience to help students connect with each other.",
+    dream: "We first sought to gather empathy data to better understand our audience. I conducted several interviews and helped analyze the data we had all collected. Through our empathy data, we learned that Freshman students at BYU need lasting connections with other students in order to have a greater sense of belonging at BYU.\n\n We then took this Point of View and had a brainstorming session using Lucid to facilitate that ideation process. We grouped our ideas into 3 categories: communication, creation, and games.",
+    nerd: "After selecting our top ideas, we created a prototype experience to get feedback from participants. Through the feedback we got as well as our observations, we realized that our activities we had chosen weren't helping them build connections.\n\nTo help us facilitate this experience, we created a journey map to understand the guests' journey and incorporate more connection-building activities. We focused on making the experience immersive by adding A/V and desgined costumes.",
+    resultsProduced: "By being willing to adapt from our prototype, we were able to create a more immersive and cohesive experience that helped participants foster connections with one another, increasing perceived connection and immersion by 20%. I personally learned about the power of pivoting and how important the details of every experience are.",
+    fun: "This project was so fun, because our team loved Harry Potter and worked hard to mix it into our experience. We also set up the lights to turn back on with the swish of my wand, which really contributed to the overall experience.",
+    topImage: "/projects/harry-potter/harrypotter.jpg",
+    bottomImage: "/projects/harry-potter/hogwarts-id.jpg"
   }
 ];
+
+{/* TEMPLATE
+  {
+    slug: "",
+    title: "",
+    timeline: "",
+    description: "",
+    skills: [""],
+    tools: [""],
+    role: [""],
+    overview: "",
+    dream: "",
+    nerd: "",
+    resultsProduced: "",
+    fun: "",
+    topImage: ""
+  }
+  */}
