@@ -50,6 +50,17 @@ export default async function ProjectPage({
                         <p className="mb-8">{project.resultsProduced}</p>
                         <h2 className="mb-2 font-handwriting text-3xl md:text-4xl">How I Kept it Fun?</h2>
                         <p className="mb-8">{project.fun}</p>
+                        {project.bottomImage && (
+                            <div className="w-[300px] h-[300px] relative overflow-hidden rounded-lg shadow-md">
+                                <Image
+                                    src={project.bottomImage} 
+                                    alt={`${project.title} image`} 
+                                    className="object-cover" 
+                                    fill
+                                    priority
+                                />
+                            </div>
+                        )}
                     </div>
                 </article>
             </div>
