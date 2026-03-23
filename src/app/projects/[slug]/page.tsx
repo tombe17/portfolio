@@ -28,13 +28,33 @@ export default async function ProjectPage({
                     <h1 className="text-4xl font-bold text-brand-primary pb-1">{project.title}</h1>
                     <p className="text-s italic text-gray-600 mb-8">{project.description}</p>
                     <div className="w-[300px] h-[300px] relative overflow-hidden rounded-lg shadow-md">
-                        <Image
-                            src={project.topImage} 
-                            alt={`${project.title} image`} 
-                            className="object-cover" 
-                            fill
-                            priority
-                        />
+                        {project.video ? (
+                            <video 
+                                autoPlay loop playsInline controls
+                                className={project.videoClass}>
+                                    <source src={project.video} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                            </video>
+                        ) : (
+                            <Image
+                                src={project.topImage} 
+                                alt={`${project.title} image`} 
+                                className="object-cover" 
+                                fill
+                                priority
+                            />
+                        )}
+                    </div>
+                    <div className="mt-6">
+                        {project.projectLink && (
+                            <a  
+                                href={project.projectLink} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="bg-brand-primary text-white px-4 py-2 rounded-full hover:bg-brand-secondary transition">
+                                {project.projectLinkButton}
+                            </a>
+                        )}
                     </div>
                 </header>
 
