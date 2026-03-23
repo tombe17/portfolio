@@ -21,17 +21,17 @@ export default function Connect() {
         <div className="flex flex-col justify-center items-center text-center text-3xl p-24">
           
           {/* Connect Info */}
-          <div>
+          <div className="flex flex-col items-center justify-center">
             <h3 className="text-5xl font-bold mb-4 text-brand-secondary">Let's Connect!</h3>
-            <div className='flex flex-row items-center justify-center gap-2'>
+            <div className='flex flex-row items-center justify-center gap-4'>
               <Link 
               href="https://linkedin.com/in/thomas-bellows" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="group flex flex-col items-center gap-1 text-brand-primary hover:text-brand-secondary">
-              <Linkedin size={24} strokeWidth={1.5} />
-              <span className="text-[10px] tracking-widest font-bold opacity-70 group-hover:opacity-100">
+              className="group flex flex-col items-center gap-1 text-brand-secondary hover:text-white">
+              <Linkedin size={32} strokeWidth={1.5} />
+              <span className="text-[16px] tracking-widest font-bold opacity-70 group-hover:opacity-100">
                 LinkedIn
               </span>
               </Link>
@@ -40,9 +40,9 @@ export default function Connect() {
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="Link to Email"
-              className="group flex flex-col items-center gap-1 text-brand-primary hover:text-brand-secondary">
-              <MailIcon size={24} strokeWidth={1.5} />
-              <span className="text-[10px] tracking-widest font-bold opacity-70 group-hover:opacity-100">
+              className="group flex flex-col items-center gap-1 text-brand-secondary hover:text-white">
+              <MailIcon size={32} strokeWidth={1.5} />
+              <span className="text-[16px] tracking-widest font-bold opacity-70 group-hover:opacity-100">
                 Email
               </span>
               </Link>
