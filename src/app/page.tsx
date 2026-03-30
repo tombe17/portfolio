@@ -80,10 +80,12 @@ export default function Home() {
               />
             </div>
             <div className="flex flex-col justify-center items-center text-center order-2 md:order-1 space-y-4 max-w-xl p-8">
-              <h3 className="text-3xl md:text-6xl text-brand-secondary">
-                <span className="font-handwriting">I'm a </span>
-                <span className="font-handwriting font-bold">Dreamer.</span>
-              </h3>
+              <Link href="/connect">
+                <h3 className="text-3xl md:text-6xl text-brand-secondary transition-all hover:scale-110 hover:drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)] cursor-pointer">
+                  <span className="font-handwriting">I'm a </span>
+                  <span className="font-handwriting font-bold">Dreamer.</span>
+                </h3>
+              </Link>
               <h2 className="text-2xl text-brand-primary leading-snug text-gray-700">
                 I dream big. I'm all about envisioning the future, perfect for blue sky discussions! 
                 If you need an idea or want to hear my latest dream, let's chat!
@@ -102,10 +104,12 @@ export default function Home() {
               />
             </div>
             <div className="flex flex-col justify-center text-center order-2 md:order-1 space-y-4 max-w-xl p-8">
-              <h3 className="text-3xl md:text-6xl text-brand-secondary">
-                <span className="font-handwriting">I'm a </span>
-                <span className="font-handwriting font-bold">Nerd. </span>
-              </h3>
+              <Link href="/projects">
+                <h3 className="text-3xl md:text-6xl text-brand-secondary transition-all hover:scale-110 hover:drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)] cursor-pointer">
+                  <span className="font-handwriting">I'm a </span>
+                  <span className="font-handwriting font-bold">Nerd. </span>
+                </h3>
+              </Link>
               <h2 className="text-2xl text-brand-primary leading-snug text-gray-700">
                 It's true, even if I deny it. I love programming, and using technology to simplify and maximize life. 
                 I built this heart rate monitor for the Valentine's Museum during its construction phase!
@@ -124,10 +128,12 @@ export default function Home() {
               />
             </div>
             <div className="flex flex-col justify-center items-center text-center order-2 md:order-1 space-y-4 max-w-xl p-8">
-              <h3 className="text-3xl md:text-6xl text-brand-secondary">
-                <span className="font-handwriting">I'm a </span>
-                <span className="font-handwriting font-bold">Producer.</span>
-              </h3>
+              <Link href="/projects/gratitude-events">
+                <h3 className="text-3xl md:text-6xl text-brand-secondary transition-all hover:scale-110 hover:drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)] cursor-pointer">
+                  <span className="font-handwriting">I'm a </span>
+                  <span className="font-handwriting font-bold">Producer.</span>
+                </h3>
+              </Link>
               <h2 className="text-2xl text-brand-primary leading-snug">
                 I build spaces for people to connect, focusing on education, spiritual, and memorable experiences. 
                 I led a team to celebrate volunteers in BYUSA with a suprise - Batman!
@@ -146,10 +152,12 @@ export default function Home() {
               />
             </div>
             <div className="flex flex-col justify-center text-center order-2 md:order-1 space-y-4 max-w-xl p-8">
-              <h3 className="text-3xl md:text-6xl text-brand-secondary">
-                <span className="font-handwriting">I'm a </span>
-                <span className="font-handwriting font-bold">Kid.</span>
-              </h3>
+              <Link href="/projects/milk-bar">
+                <h3 className="text-3xl md:text-6xl text-brand-secondary transition-all hover:scale-110 hover:drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)] cursor-pointer">
+                  <span className="font-handwriting">I'm a </span>
+                  <span className="font-handwriting font-bold">Kid.</span>
+                </h3>
+              </Link>
               <h2 className="text-2xl text-brand-primary leading-snug">
                 In my heart, I mean. Sometimes you just gotta enjoy life. Have some fun and do something goofy like hitting all the blocks in Super Nintendo World. 
                 (If you couldn't tell, I like Mario) Wa-hoo!

@@ -1,5 +1,25 @@
 export const projects = [
   {
+    slug: "milk-bar",
+    title: "Romani's Milk Bar",
+    timeline: "Mar-Apr 2026",
+    description: "Coming Soon!",
+    skills: [""],
+    tools: [""],
+    role: [""],
+    overview: "Recreating the milk bar from Legend of Zelda: Majora's Mask...",
+    dream: "",
+    nerd: "",
+    resultsProduced: "",
+    fun: "",
+    topImage: "/projects/milk-bar/milk-bar.png"
+    //bottomImage: "", //optional
+    //projectLink: "", //optional for linking pdf
+    //projectLinkButton: "", //text for pdf button
+    //video: "", // optional for linking videos
+    //videoClass: "" //optional for styling videos
+  },
+  {
     slug: "valentines-museum",
     title: "Valentine's Museum",
     timeline: "Jan-Feb 2025",
@@ -119,7 +139,7 @@ export const projects = [
     bottomImage: "", //optional
     projectLink: "", //optional for linking pdf
     projectLinkButton: "", //text for pdf button
-    video: "" // optional for linking videos
+    video: "", // optional for linking videos
     videoClass: "" //optional for styling videos
   }
   */}
