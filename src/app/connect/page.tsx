@@ -53,7 +53,7 @@ export default function Connect() {
           {/* Form */}
           <form 
             action="https://api.web3forms.com/submit" method="POST"
-            className="w-3/5 flex flex-col max-w-6xl p-8 text-md md:text-lg gap-6">
+            className="md:w-3/5 flex flex-col max-w-6xl p-8 text-base md:text-xl gap-6">
             <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_KEY}/>
 
             <div className="flex flex-col md:flex-row gap-4">
@@ -85,7 +85,7 @@ export default function Connect() {
 
             <button 
               type="submit"
-              className="w-full text-xl cursor-pointer bg-brand-primary text-white py-2 rounded-md hover:bg-brand-secondary transition outline-none"
+              className="w-full text-base md:text-xl cursor-pointer bg-brand-primary text-white py-2 rounded-md hover:bg-brand-secondary transition outline-none"
             >
               Send Message
             </button>

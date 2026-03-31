@@ -4,6 +4,7 @@ import { Linkedin, Github } from "lucide-react";
 import { Analytics } from "@vercel/analytics/next";
 import Link from "next/link";
 import MotionProvider from "@/components/motion";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 
 // Configure Montserrat and Caveat
@@ -29,7 +30,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  console.log("Font Variable Check:", handwriting.variable);
+  //console.log("Font Variable Check:", handwriting.variable);
 
   return (
     <html lang="en" className={`${montserrat.variable} ${handwriting.variable}`} 
@@ -38,23 +39,7 @@ export default function RootLayout({
       <body className="font-sans antialiased min-h-screen flex flex-col">
       
       {/* Navigation */}
-      <header className="w-full z-50 bg-white/80">
-        <nav className="w-full z-50 bg-white/80">
-          <div className="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-            <Link href="/" className="text-brand-primary text-3xl font-bold tracking-tighter">
-              Thomas Bellows
-            </Link>
-            <div className="space-x-8 text-m font-medium">
-              <Link href="/#mystory" className="hover:text-brand-secondary transition">My Story</Link>
-              <Link href="/projects" className="hover:text-brand-secondary transition">Projects</Link>
-              <Link href="/artwork" className="hover:text-brand-secondary transition">Artwork</Link>
-              <Link href="/connect" className="bg-brand-primary text-white px-4 py-2 rounded-full hover:bg-brand-secondary transition">
-                Connect
-              </Link>
-            </div>
-          </div>
-        </nav>
-      </header>
+      <Navbar />
 
       <main className="flex-1">
         <MotionProvider>
@@ -66,7 +51,7 @@ export default function RootLayout({
       <footer className="border-t bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 py-6 grid grid-cols-1 md:grid-cols-3 items-center gap-6">
           
-          <div className="text-center md:text-left">
+          <div className="hidden md:flex text-center md:text-left">
             <p className="font-bold text-lg text-brand-primary">Thomas Bellows</p>
           </div>
           
@@ -96,7 +81,7 @@ export default function RootLayout({
     
           </div>
 
-          <p className="text-xs text-gray-400 text-center md:text-right">
+          <p className="hidden md:flex text-xs text-gray-400 text-center md:text-right">
             © 2026 Built with Next.js & TypeScript
           </p>
         </div>
