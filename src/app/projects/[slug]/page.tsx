@@ -21,7 +21,7 @@ export default async function ProjectPage({
   return (
     <main className="mx-auto p-8 bg-gray-50 min-h-screen">
         
-        <div className="flex flex-col md:flex-row justify-between items-start gap-12 pl-24 pr-16 pt-8">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-12 pl-8 md:pl-24 pr-16 pt-8">
             {/* Article */}
             <div className="flex-1">
                 <header className="mt-6 mb-8 max-w-xl">
@@ -30,7 +30,7 @@ export default async function ProjectPage({
                     <div className="w-[300px] h-[300px] relative overflow-hidden rounded-lg shadow-md">
                         {project.video ? (
                             <video 
-                                autoPlay loop playsInline controls
+                                autoPlay loop playsInline controls muted
                                 className={project.videoClass}>
                                     <source src={project.video} type="video/mp4" />
                                     Your browser does not support the video tag.
@@ -86,7 +86,7 @@ export default async function ProjectPage({
             </div>
 
             {/* Side Nav */}
-            <aside className="md:w-64 shrink-0 md:ml-auto sticky top-16 h-fit">
+            <aside className="md:w-64 shrink-0 md:ml-auto sticky top-24 h-fit pb-16 md:pl-16 md:pb-0">
                 <Link href="/projects" className="text-brand-secondary hover:underline text-lg">
                 ← Back to Projects
                 </Link>
@@ -110,7 +110,7 @@ export default async function ProjectPage({
                     <p className="font-bold">Role:</p>
                     <ul className="list-disc list-inside space-y-1 ml-2">
                         {project.role.map((role) => (
-                            <li key={role}>{role}</li> //currently just one role, could do multiple
+                            <li key={role}>{role}</li>
                         ))}
                     </ul>
                 </div>
