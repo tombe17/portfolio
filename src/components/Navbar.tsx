@@ -33,7 +33,7 @@ export default function Navbar() {
 
                 {/* Mobile Nav */}
                 <div className={`${isOpen ? "block" : "hidden"} md:hidden mt-4 pb-4 border-t border-gray-100`}>
-                    <div className="flex flex-col space-y-4 pt-4 text-center font-medium text-brand-primary">
+                    <div className="flex flex-col space-y-2 pt-4 text-center font-medium text-brand-primary">
                         <Link href="/#mystory" onClick={() => setIsOpen(false)} className="py-2 hover:text-brand-secondary">My Story</Link>
                         <Link href="/projects" onClick={() => setIsOpen(false)} className="py-2 hover:text-brand-secondary">Projects</Link>
                         <Link href="/artwork" onClick={() => setIsOpen(false)} className="py-2 hover:text-brand-secondary">Artwork</Link>

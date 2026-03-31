@@ -116,9 +116,9 @@ export default function Artwork() {
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 animate-in fade-in duration-300"
             onClick={() => setSelectedIndex(null)} // Click anywhere to close
           >
-            <button className="absolute top-6 right-8 text-white font-light text-5xl hover:scale-110 transition-transform">×</button>
-            <button onClick={showPrev} className="absolute left-8 text-white text-7xl z-[60] hover:scale-110 transition-transform">‹</button>
-            <button onClick={showNext} className="absolute right-8 text-white text-7xl z-[60] hover:scale-110 transition-transform">›</button>
+            <button className="absolute top-6 right-8 text-white font-light text-5xl z-[60] hover:scale-110 hover:cursor-pointer transition-transform">×</button>
+            <button onClick={showPrev} className="absolute left-8 text-white text-7xl z-[60] hover:scale-110 hover:cursor-pointer transition-transform">‹</button>
+            <button onClick={showNext} className="absolute right-8 text-white text-7xl z-[60] hover:scale-110 hover:cursor-pointer transition-transform">›</button>
             
             <div className="relative w-full h-full flex flex-col items-center justify-center">
               <div className="relative w-full h-full max-h-[85vh] transition-all duration-500">

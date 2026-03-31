@@ -51,7 +51,7 @@ export default function RootLayout({
       <footer className="border-t bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 py-6 grid grid-cols-1 md:grid-cols-3 items-center gap-6">
           
-          <div className="hidden md:flex text-center md:text-left">
+          <div className="hidden md:block text-center text-left">
             <p className="font-bold text-lg text-brand-primary">Thomas Bellows</p>
           </div>
           
@@ -78,12 +78,12 @@ export default function RootLayout({
                 GitHub
               </span>
             </Link>
-    
           </div>
 
-          <p className="hidden md:flex text-xs text-gray-400 text-center md:text-right">
+          <p className="hidden md:block md:ml-auto text-xs text-gray-400 text-center md:text-right">
             © 2026 Built with Next.js & TypeScript
           </p>
+
         </div>
       </footer>
       <Analytics />
