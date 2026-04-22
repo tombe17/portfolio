@@ -104,7 +104,7 @@ export default function Home() {
               />
             </div>
             <div className="flex flex-col justify-center text-center order-2 md:order-1 space-y-4 max-w-xl p-12 md:p-8">
-              <Link href="/projects">
+              <Link href="/projects/valentines-museum">
                 <h3 className="text-4xl md:text-6xl text-brand-secondary transition-all hover:scale-110 hover:drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)] cursor-pointer">
                   <span className="font-handwriting">I'm a </span>
                   <span className="font-handwriting font-bold">Nerd. </span>
@@ -152,7 +152,7 @@ export default function Home() {
               />
             </div>
             <div className="flex flex-col justify-center text-center order-2 md:order-1 space-y-4 max-w-xl p-12 md:p-8">
-              <Link href="/projects/milk-bar">
+              <Link href="/projects/highlighted-project">
                 <h3 className="text-4xl md:text-6xl text-brand-secondary transition-all hover:scale-110 hover:drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)] cursor-pointer">
                   <span className="font-handwriting">I'm a </span>
                   <span className="font-handwriting font-bold">Kid.</span>
@@ -192,7 +192,7 @@ export default function Home() {
               <Link href="/projects" className="border border-brand-secondary px-4 py-2 text-xs md:px-8 md:py-3 md:text-base rounded-full text-white hover:bg-brand-secondary hover:text-white transition">
                 View Projects
               </Link>
-              <Link href="/projects/valentines-museum" className="border border-brand-secondary bg-brand-secondary px-4 py-2 text-xs md:px-8 md:py-3 md:text-base rounded-full text-white hover:text-black transition">
+              <Link href="/projects/highlighted-project" className="border border-brand-secondary bg-brand-secondary px-4 py-2 text-xs md:px-8 md:py-3 md:text-base rounded-full text-white hover:text-black transition">
                 Highlighted Project
               </Link>
               <Link href="/artwork" className="border border-brand-secondary px-4 py-2 text-xs md:px-8 md:py-3 md:text-base rounded-full text-white hover:bg-brand-secondary hover:text-white transition">
